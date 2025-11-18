@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Epic Style Carousel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .epic-carousel {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .epic-carousel .carousel-item img {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .epic-caption {
+      position: absolute;
+      left: 5%;
+      bottom: 10%;
+      color: #fff;
+      z-index: 10;
+    }
+
+    .epic-caption h2 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .epic-caption p {
+      font-size: 1.2rem;
+      max-width: 450px;
+    }
+
+    .epic-btn {
+      padding: 10px 25px;
+      background: #0078f2;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .epic-btn:hover {
+      background: #0166c7;
+    }
+
+    /* أسهم التحكم باللون الأسود */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1); /* يخليها سودة بدل بيضا */
+    }
+
+  </style>
+</head>
+<body class="bg-dark text-white">
+
+<div id="epicCarousel" class="carousel slide epic-carousel"
+     data-bs-ride="carousel"
+     data-bs-interval="4000"> <!-- Auto-play كل 4 ثواني -->
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="https://wallpapercave.com/wp/wp10475661.jpg" alt="Game 1">
+      <div class="epic-caption">
+        <h2>Awesome Game 1</h2>
+        <p>أجواء ملحمية وتفاصيل تخليك تحس إنك داخل المعركة فعلًا.</p>
+        <a href="#" class="epic-btn">Play Now</a>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://wallpapercave.com/wp/wp10978890.jpg" alt="Game 2">
+      <div class="epic-caption">
+        <h2>Adventure Game</h2>
+        <p>اكتشاف… مغامرة… وكمية أكشن تشحنك طاقة.</p>
+        <a href="#" class="epic-btn">Discover</a>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://wallpapercave.com/wp/wp10585165.jpg" alt="Game 3">
+      <div class="epic-caption">
+        <h2>Battle Royale</h2>
+        <p>جاهز تكون آخر ناجي؟ جهّز سلاحك وانزل أرض القتال.</p>
+        <a href="#" class="epic-btn">Join</a>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#epicCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#epicCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
